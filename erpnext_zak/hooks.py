@@ -95,6 +95,11 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
+doc_events = {
+	"Attendance": {
+		"validate": "erpnext_zak.erpnext_zak.doc_events.attendance_event.validate"
+	},
+}
 # doc_events = {
 #	"*": {
 #		"on_update": "method",
