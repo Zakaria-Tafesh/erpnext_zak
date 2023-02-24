@@ -31,7 +31,10 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Purchase Order": "public/js/purchase.js",
+              "Quotation": "public/js/quotation.js",
+              "Sales Invoice": "public/js/sales_invoice.js",
+              }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -87,17 +90,20 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
-# }
-
+override_doctype_class = {
+	"Purchase Order": "erpnext_custom.overrides.CustomPurchaseOrder"
+}
 # Document Events
 # ---------------
 # Hook on document methods and events
 
+
 doc_events = {
 	"Attendance": {
 		"validate": "erpnext_zak.erpnext_zak.doc_events.attendance_event.validate"
+	},
+	"Sales Invoice": {
+		"validate": "erpnext_zak.erpnext_zak.doc_events.sales_invoice.validate"
 	},
 }
 # doc_events = {
@@ -183,4 +189,3 @@ user_data_fields = [
 # auth_hooks = [
 #	"erpnext_zak.auth.validate"
 # ]
-
