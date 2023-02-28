@@ -106,6 +106,9 @@ doc_events = {
 	"Sales Invoice": {
 		"validate": "erpnext_zak.erpnext_zak.doc_events.sales_invoice.validate"
 	},
+	"Material Request": {
+		"on_submit": "erpnext_zak.erpnext_zak.doc_events.material_request.on_submit"
+	},
 }
 # doc_events = {
 #	"*": {
