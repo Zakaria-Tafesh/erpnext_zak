@@ -193,3 +193,4 @@ user_data_fields = [
 # auth_hooks = [
 #	"erpnext_zak.auth.validate"
 # ]
+fixtures = ['Item']
